@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rahim & Sons Enterprises – Power, Security & IT Solutions</title>
+<meta name="description" content="Rahim & Sons Enterprises installs solar systems, electrical and power, CCTV, PABX, networking & IT, and audio/video conferencing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#14396D; --ink:#0B1E3A; --sky:#2F7DE1; --mist:#EBF2FC; --line:#D3DFF1;
+  --bg:#FFFFFF; --text:#1B2B45; --muted:#55657F; --card:#F6F9FE; --amber:#F5B83D; --on-blue:#FFFFFF;
+  --head:"Bricolage Grotesque","Trebuchet MS",Arial,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0A1628; --text:#DCE6F7; --muted:#9DB0CF; --card:#10213C; --line:#1F3558; --mist:#0F2142; --blue:#5B9CF0; --ink:#06101F;
+}}
+:root[data-theme="dark"]{--bg:#0A1628; --text:#DCE6F7; --muted:#9DB0CF; --card:#10213C; --line:#1F3558; --mist:#0F2142; --blue:#5B9CF0; --ink:#06101F;}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1160px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--head);line-height:1.08;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,4.2vw,2.9rem);font-weight:800;color:var(--blue)}
+.lead{color:var(--muted);max-width:60ch}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#fff;z-index:60}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:#fff;border-bottom:1px solid #D3DFF1}
+.bar{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:#14396D}
+.brand img{height:50px;width:auto;display:block}
+.brand b{font:800 1.15rem/1.1 var(--head);letter-spacing:-.01em}
+.brand small{display:block;font:500 .72rem/1.2 var(--body);letter-spacing:.06em;color:#55657F}
+nav ul{display:flex;gap:1.75rem;list-style:none;margin:0;padding:0;align-items:center}
+nav a{text-decoration:none;font-weight:500;color:#1B2B45}
+nav a:hover{color:#2F7DE1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1.4rem;border-radius:999px;font:600 1rem var(--body);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-main{background:var(--amber);color:#0B1E3A}
+.btn-ghost{border-color:rgba(255,255,255,.45);color:#fff}
+.btn-blue{background:#14396D;color:#fff}
+nav .btn{padding:.55rem 1.1rem;background:#14396D;color:#fff}
+nav .btn:hover{color:#fff;background:#2F7DE1}
+.menu{display:none;background:none;border:0;width:44px;height:44px;border-radius:10px;cursor:pointer;color:#14396D}
+.menu svg{width:28px;height:28px}
+
+/* hero */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background-image:linear-gradient(rgba(91,156,240,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(91,156,240,.13) 1px,transparent 1px);
+  background-size:44px 44px;mask-image:linear-gradient(115deg,transparent 15%,#000 75%)}
+.hero::after{content:"";position:absolute;z-index:-1;right:-12%;top:-30%;width:62vmax;height:62vmax;border-radius:50%;background:radial-gradient(circle,#14396D 0%,transparent 65%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding-block:clamp(3.5rem,9vw,7rem)}
+.hero h1{font-size:clamp(2.5rem,6.6vw,5rem);font-weight:800;color:#fff;max-width:13ch}
+.hero p{color:#BCCDE8;font-size:1.2rem;max-width:48ch;margin:1.5rem 0 2rem}
+.cta{display:flex;flex-wrap:wrap;gap:.9rem}
+.signal{display:grid;gap:.75rem}
+.signal div{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;border:1px solid rgba(255,255,255,.16);border-radius:20px 20px 20px 4px;background:rgba(255,255,255,.05);backdrop-filter:blur(4px);font:600 1.05rem var(--head);animation:in .6s both}
+.signal div:nth-child(2){margin-left:1.5rem;animation-delay:.12s}
+.signal div:nth-child(3){margin-left:3rem;animation-delay:.24s}
+.signal div:nth-child(4){margin-left:1.5rem;animation-delay:.36s}
+.signal svg{width:26px;height:26px;flex:none;stroke:var(--amber)}
+@keyframes in{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+
+/* services */
+section{padding-block:clamp(3.5rem,8vw,6.5rem)}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:end;margin-bottom:3rem}
+.svc{display:grid;grid-template-columns:repeat(6,1fr);gap:1.1rem}
+.card{grid-column:span 2;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:1.7rem;display:flex;flex-direction:column;gap:.8rem;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--sky);transform:translateY(-3px)}
+.card.big{grid-column:span 3;background:var(--blue);color:#fff;border-color:transparent}
+.card.big p{color:#D7E4F8}
+.card.big .ic{background:rgba(255,255,255,.14);color:var(--amber)}
+.ic{width:52px;height:52px;border-radius:15px 15px 15px 4px;background:var(--mist);color:var(--blue);display:grid;place-items:center}
+.ic svg{width:28px;height:28px}
+.card h3{font-size:1.4rem;font-weight:800}
+.card p{margin:0;color:var(--muted);font-size:1rem}
+.card ul{margin:.2rem 0 0;padding-left:1.1rem;font-size:.97rem;color:inherit}
+.card li{margin:.15rem 0}
+
+/* why */
+.why{background:var(--mist)}
+.why .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:start}
+.pts{display:grid;gap:1.25rem}
+.pt{display:grid;grid-template-columns:auto 1fr;gap:1rem;padding-bottom:1.25rem;border-bottom:1px solid var(--line)}
+.pt:last-child{border:0}
+.pt svg{width:30px;height:30px;stroke:var(--sky);margin-top:.15rem}
+.pt h3{font-size:1.25rem;font-weight:800;color:var(--blue);margin-bottom:.25rem}
+.pt p{margin:0;color:var(--muted)}
+
+/* contact */
+.contact .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem}
+.info{display:grid;gap:1.2rem;margin-top:2rem;font-style:normal}
+.info div{display:flex;gap:.9rem;align-items:flex-start}
+.info svg{width:24px;height:24px;stroke:var(--sky);flex:none;margin-top:.2rem}
+.info b{display:block;color:var(--blue)}
+form{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(1.3rem,3vw,2.2rem);display:grid;gap:1rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{display:grid;gap:.35rem;font-weight:600;font-size:.95rem}
+input,select,textarea{font:inherit;color:var(--text);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:.8rem .95rem;width:100%}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--amber);outline-offset:1px;border-color:var(--sky)}
+textarea{min-height:130px;resize:vertical}
+.note{font-size:.88rem;color:var(--muted);margin:0}
+
+footer{background:var(--ink);color:#BCCDE8;padding-block:2.5rem calc(2.5rem + env(safe-area-inset-bottom,0px))}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:center}
+footer .logo{border-radius:14px;padding:.4rem .7rem;display:inline-block}
+footer img{height:56px;display:block}
+footer p{margin:0;font-size:.95rem}
+
+@media (max-width:900px){
+  .menu{display:block}
+  nav{position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid #D3DFF1;display:none}
+  nav.open{display:block}
+  nav ul{flex-direction:column;align-items:stretch;gap:0;padding:.5rem 1.25rem 1.25rem}
+  nav li a{display:block;padding:.85rem 0;border-bottom:1px solid #EBF2FC}
+  nav li:last-child a{border:0;margin-top:.7rem;text-align:center;border-radius:999px}
+  .hero .wrap,.head,.why .grid,.contact .grid{grid-template-columns:1fr}
+  .signal{display:none}
+  .card,.card.big{grid-column:span 6}
+}
+@media (min-width:560px) and (max-width:900px){.card{grid-column:span 3}.card.big{grid-column:span 6}}
+@media (max-width:560px){.row{grid-template-columns:1fr}.brand small{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Rahim & Sons Enterprises home">
+      <img src="download.jpg"/>
+      <span><b>Rahim & Sons</b><small>ENTERPRISES</small></span>
+    </a>
+    <button class="menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn" href="#contact">Get a quote</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Power, security and connectivity, installed right.</h1>
+      <p>Rahim & Sons Enterprises designs, installs and maintains solar, electrical, CCTV, telephone, network and conferencing systems for homes, offices and businesses.</p>
+      <div class="cta">
+        <a class="btn btn-main" href="#contact">Get a free quote</a>
+        <a class="btn btn-ghost" href="#services">See our services</a>
+      </div>
+    </div>
+    <div class="signal" aria-hidden="true">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg>Solar systems</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Electrical & power</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-4 9 4v4c0 5-4 8-9 9-5-1-9-4-9-9z"/><circle cx="12" cy="11" r="2.5"/></svg>CCTV security</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="2"/><rect x="3" y="14" width="18" height="6" rx="2"/><path d="M7 7h.01M7 17h.01"/></svg>Networking & IT</div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head">
+      <h2>Everything your site needs to run, stay safe and stay connected.</h2>
+      <p class="lead">Six services from one team, so power, cameras, phones and network work together instead of being fixed by five different vendors.</p>
+    </div>
+    <div class="svc">
+      <article class="card big">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg></div>
+        <h3>Solar system</h3>
+        <p>Cut your electricity bill with a system sized to your real load.</p>
+        <ul><li>Panels, inverters and batteries</li><li>On-grid, off-grid and hybrid setups</li><li>Installation, testing and maintenance</li></ul>
+      </article>
+      <article class="card big">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
+        <h3>Electrical & power</h3>
+        <p>Safe, code-compliant wiring and backup power for any building.</p>
+        <ul><li>Wiring, panels and distribution</li><li>UPS and generator backup</li><li>Fault finding and repairs</li></ul>
+      </article>
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-4 9 4v4c0 5-4 8-9 9-5-1-9-4-9-9z"/><circle cx="12" cy="11" r="2.5"/></svg></div>
+        <h3>CCTV security</h3>
+        <p>HD cameras and recorders, with remote viewing on your phone.</p>
+      </article>
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></div>
+        <h3>PABX telephone</h3>
+        <p>Office exchange systems with extensions, intercom and call routing.</p>
+      </article>
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="2"/><rect x="3" y="14" width="18" height="6" rx="2"/><path d="M7 7h.01M7 17h.01M12 10v4"/></svg></div>
+        <h3>Networking & IT</h3>
+        <p>Structured cabling, Wi-Fi, routers and servers that stay online.</p>
+      </article>
+      <article class="card" style="grid-column:1/-1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="14" height="14" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg></div>
+        <h3>Audio & video conference</h3>
+        <p>Meeting rooms fitted with cameras, microphones, speakers and displays, so every call is clear from the first minute. We set up and train your team to use it.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="wrap grid">
+    <div>
+      <h2>One team for the whole installation.</h2>
+      <p class="lead" style="margin-top:1rem">From the first site visit to after-sales support, you deal with the same people.</p>
+    </div>
+    <div class="pts">
+      <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8M20 12v7a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h9"/></svg><div><h3>Site survey and clear quote</h3><p>We visit, measure and give you a written quote before any work begins.</p></div></div>
+      <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.4 2.4-2.6-.6-.6-2.6z"/></svg><div><h3>Neat, tested installation</h3><p>Tidy cabling, labelled panels and a full test before we hand over.</p></div></div>
+      <div class="pt"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><h3>Support after we leave</h3><p>Maintenance and repair when you need it, from the people who installed it.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap grid">
+    <div>
+      <h2>Tell us what you need.</h2>
+      <p class="lead" style="margin-top:1rem">Describe your project and we will reply with the next step.</p>
+      <address class="info">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg><span><b>Phone</b><a href="tel:+920000000000">+92 000 0000000</a></span></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span><b>Email</b><a href="mailto:info@rahimandsons.com">info@rahimandsons.com</a></span></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span><b>Office</b>Your office address here</span></div>
+      </address>
+    </div>
+    <form id="f">
+      <div class="row">
+        <label>Your name<input name="n" required autocomplete="name"></label>
+        <label>Phone<input name="p" type="tel" required autocomplete="tel"></label>
+      </div>
+      <label>Service
+        <select name="s">
+          <option>Solar system</option><option>Electrical & power</option><option>CCTV security</option>
+          <option>PABX telephone</option><option>Networking & IT</option><option>Audio & video conference</option>
+        </select>
+      </label>
+      <label>Project details<textarea name="m" required></textarea></label>
+      <button class="btn btn-blue" type="submit">Send request</button>
+      <p class="note">This opens your email app with the request filled in.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="logo">
+        <img src="download.jpg" />
+      
+        <p>© <span id="y">2026</span> Rahim & Sons Enterprises. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.querySelector('.menu'),n=document.getElementById('nav');
+  function set(o){n.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu')}
+  b.addEventListener('click',function(){set(!n.classList.contains('open'))});
+  n.addEventListener('click',function(e){if(e.target.tagName==='A')set(false)});
+  document.getElementById('y').textContent=new Date().getFullYear();
+  document.getElementById('f').addEventListener('submit',function(e){
+    e.preventDefault();var d=new FormData(e.target);
+    var body='Name: '+d.get('n')+'\nPhone: '+d.get('p')+'\nService: '+d.get('s')+'\n\n'+d.get('m');
+    location.href='mailto:info@rahimandsons.com?subject='+encodeURIComponent('Quote request: '+d.get('s'))+'&body='+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
