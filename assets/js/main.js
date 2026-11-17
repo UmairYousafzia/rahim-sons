@@ -58,35 +58,44 @@ function navigateTo(route) {
 }
 
 // Highlight Active Nav Link based on Current URL
+
 function updateActiveNavLink() {
-  // Get the complete pathname
-  let currentPath = window.location.pathname.toLowerCase();
+  // Normalize URL paths
+  function normalizePath(path) {
+    path = path.toLowerCase().split('?')[0].split('#')[0];
+    path = path.replace(/\/+$/, '');
+    path = path.replace(/\.html$/, '');
 
-  // Normalize homepage and trailing slashes
-  currentPath = currentPath.replace(/\/+$/, '') || '/';
+    return path || '/';
+  }
 
-  // Support both clean URLs and old .html URLs
-  currentPath = currentPath.replace(/\.html$/, '');
+  const currentPath = normalizePath(window.location.pathname);
 
-  const pageRouteMap = {
-    '/': 'home',
-    '/index': 'home',
-    '/about': 'about',
-    '/services': 'services',
-    '/projects': 'projects',
-    '/contact': 'contact'
+  const routes = {
+    home: '/',
+    about: '/about',
+    services: '/services',
+    projects: '/projects',
+    contact: '/contact'
   };
 
-  const currentRoute = pageRouteMap[currentPath] || 'home';
+  document.querySelectorAll('.nav-link[data-route]').forEach(link => {
+    const route = link.getAttribute('data-route');
+    const expectedPath = routes[route];
 
-  document.querySelectorAll('.nav-link').forEach((link) => {
-    const linkRoute = link.getAttribute('data-route');
+    const isActive = expectedPath &&
+                     normalizePath(expectedPath) === currentPath;
 
-    if (linkRoute === currentRoute) {
-      link.classList.add('active-nav');
-    } else {
-      link.classList.remove('active-nav');
-    }
+    link.classList.toggle('active-nav', Boolean(isActive));
+
+    console.log(
+      'Navigation:',
+      route,
+      '| Current:',
+      currentPath,
+      '| Active:',
+      Boolean(isActive)
+    );
   });
 }
 
