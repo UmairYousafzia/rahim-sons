@@ -42,15 +42,15 @@ function applySiteImages() {
 // Navigation Helper
 function navigateTo(route) {
   const targetMap = {
-    home: 'index.html',
-    about: 'about.html',
-    services: 'services.html',
-    projects: 'projects.html',
-    contact: 'contact.html'
+    home: '/',
+    about: '/about',
+    services: '/services',
+    projects: '/projects',
+    contact: '/contact'
   };
 
-  const targetFile = targetMap[route] || 'index.html';
-  const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+  const targetFile = targetMap[route] || '/';
+  const currentFile = window.location.pathname.split('/').pop() || '/';
 
   if (currentFile !== targetFile) {
     window.location.href = targetFile;
@@ -59,14 +59,14 @@ function navigateTo(route) {
 
 // Highlight Active Nav Link based on Current URL
 function updateActiveNavLink() {
-  const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+  const currentFile = window.location.pathname.split('/').pop() || '/';
   const pageRouteMap = {
-    'index.html': 'home',
+    '/': 'home',
     '': 'home',
-    'about.html': 'about',
-    'services.html': 'services',
-    'projects.html': 'projects',
-    'contact.html': 'contact'
+    '/about': 'about',
+    '/services': 'services',
+    '/projects': 'projects',
+    '/contact': 'contact'
   };
 
   const currentRoute = pageRouteMap[currentFile] || 'home';
@@ -128,7 +128,7 @@ function filterProjects(category, btnEl) {
 // Service Inquiry Redirection
 function inquireService(serviceName) {
   sessionStorage.setItem('selectedService', serviceName);
-  window.location.href = 'contact.html?service=' + encodeURIComponent(serviceName);
+  window.location.href = '/contact?service=' + encodeURIComponent(serviceName);
 }
 
 // Handle Contact / Quote Form Submission
