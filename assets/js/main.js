@@ -39,6 +39,7 @@ function applySiteImages() {
   });
 }
 
+
 // Navigation Helper
 function navigateTo(route) {
   const targetMap = {
@@ -49,30 +50,38 @@ function navigateTo(route) {
     contact: '/contact'
   };
 
-  const targetFile = targetMap[route] || '/';
-  const currentFile = window.location.pathname.split('/').pop() || '/';
+  const targetUrl = targetMap[route] || '/';
 
-  if (currentFile !== targetFile) {
-    window.location.href = targetFile;
+  if (window.location.pathname !== targetUrl) {
+    window.location.href = targetUrl;
   }
 }
 
 // Highlight Active Nav Link based on Current URL
 function updateActiveNavLink() {
-  const currentFile = window.location.pathname.split('/').pop() || '/';
+  // Get the complete pathname
+  let currentPath = window.location.pathname.toLowerCase();
+
+  // Normalize homepage and trailing slashes
+  currentPath = currentPath.replace(/\/+$/, '') || '/';
+
+  // Support both clean URLs and old .html URLs
+  currentPath = currentPath.replace(/\.html$/, '');
+
   const pageRouteMap = {
     '/': 'home',
-    '': 'home',
+    '/index': 'home',
     '/about': 'about',
     '/services': 'services',
     '/projects': 'projects',
     '/contact': 'contact'
   };
 
-  const currentRoute = pageRouteMap[currentFile] || 'home';
+  const currentRoute = pageRouteMap[currentPath] || 'home';
 
   document.querySelectorAll('.nav-link').forEach((link) => {
     const linkRoute = link.getAttribute('data-route');
+
     if (linkRoute === currentRoute) {
       link.classList.add('active-nav');
     } else {
@@ -80,6 +89,7 @@ function updateActiveNavLink() {
     }
   });
 }
+
 
 // Mobile Menu Drawer Toggle
 function toggleMobileMenu(forceState) {
