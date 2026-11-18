@@ -43,6 +43,7 @@ function applySiteImages() {
 }
 
 
+
 // Navigation Helper
 function navigateTo(route) {
   const targetMap = {
@@ -55,23 +56,22 @@ function navigateTo(route) {
 
   const targetUrl = targetMap[route] || '/';
 
-  if (window.location.pathname !== targetUrl) {
+  if (normalizePath(window.location.pathname) !== normalizePath(targetUrl)) {
     window.location.href = targetUrl;
   }
 }
 
-// Highlight Active Nav Link based on Current URL
+// Normalize paths for clean URLs and .html URLs
+function normalizePath(path) {
+  path = path.toLowerCase().split('?')[0].split('#')[0];
+  path = path.replace(/\/+$/, '');
+  path = path.replace(/\.html$/, '');
 
+  return path || '/';
+}
+
+// Highlight Active Navigation Link
 function updateActiveNavLink() {
-  // Normalize URL paths
-  function normalizePath(path) {
-    path = path.toLowerCase().split('?')[0].split('#')[0];
-    path = path.replace(/\/+$/, '');
-    path = path.replace(/\.html$/, '');
-
-    return path || '/';
-  }
-
   const currentPath = normalizePath(window.location.pathname);
 
   const routes = {
@@ -82,27 +82,46 @@ function updateActiveNavLink() {
     contact: '/contact'
   };
 
-  const isServicePage = ['/solar-systems', '/net-metering', '/security-solutions', '/networking-solutions', '/services'].includes(currentPath);
+  const servicePages = [
+    '/solar-systems',
+    '/net-metering',
+    '/security-solutions',
+    '/networking-solutions',
+    '/services'
+  ];
+
+  const isServicePage = servicePages.includes(currentPath);
+
+  console.log('Current page path:', window.location.pathname);
+  console.log('Normalized path:', currentPath);
 
   document.querySelectorAll('.nav-link[data-route]').forEach(link => {
     const route = link.getAttribute('data-route');
     const expectedPath = routes[route];
 
-    let isActive = expectedPath && normalizePath(expectedPath) === currentPath;
-    
-    // If on a detailed service page, highlight the Services dropdown link/button
+    let isActive = Boolean(
+      expectedPath && normalizePath(expectedPath) === currentPath
+    );
+
     if (route === 'services' && isServicePage) {
       isActive = true;
     }
 
-    link.classList.toggle('active-nav', Boolean(isActive));
+    link.classList.toggle('active-nav', isActive);
+
+    console.log(
+      `Navigation: ${route} | Current: ${currentPath} | Active: ${isActive}`
+    );
   });
 
   const servicesDropdownBtn = document.getElementById('services-dropdown-btn');
-  if (servicesDropdownBtn && isServicePage) {
-    servicesDropdownBtn.classList.add('active-nav', 'text-blue-600');
+
+  if (servicesDropdownBtn) {
+    servicesDropdownBtn.classList.toggle('active-nav', isServicePage);
+    servicesDropdownBtn.classList.toggle('text-blue-600', isServicePage);
   }
 }
+
 
 // Mobile Services Accordion Submenu Toggle
 function toggleMobileServicesMenu() {
