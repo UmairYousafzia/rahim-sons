@@ -37,17 +37,23 @@ h1, h2, h3, h4, h5, h6, .font-display {
   color: #FFFFFF;
 }
 
-/* Smooth Scroll Reveal Animations */
+/* Smooth Scroll Reveal Animations - Resilient Fallback */
 .reveal {
-  opacity: 0;
-  transform: translateY(28px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
+/* Progressive enhancement: hide initially only when JS is confirmed loaded */
+html.js-ready .reveal:not(.active) {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
 .reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 .reveal-delay-1 {

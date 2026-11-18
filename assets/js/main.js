@@ -5,6 +5,9 @@
  * ============================================================================
  */
 
+// Signal that JavaScript is loaded
+document.documentElement.classList.add('js-ready');
+
 // Image Configuration Map (Local assets with clean fallbacks)
 const SITE_IMAGES = {
   heroBanner: 'assets/images/solar-1.jpg',
@@ -79,24 +82,38 @@ function updateActiveNavLink() {
     contact: '/contact'
   };
 
+  const isServicePage = ['/solar-systems', '/net-metering', '/security-solutions', '/networking-solutions', '/services'].includes(currentPath);
+
   document.querySelectorAll('.nav-link[data-route]').forEach(link => {
     const route = link.getAttribute('data-route');
     const expectedPath = routes[route];
 
-    const isActive = expectedPath &&
-                     normalizePath(expectedPath) === currentPath;
+    let isActive = expectedPath && normalizePath(expectedPath) === currentPath;
+    
+    // If on a detailed service page, highlight the Services dropdown link/button
+    if (route === 'services' && isServicePage) {
+      isActive = true;
+    }
 
     link.classList.toggle('active-nav', Boolean(isActive));
-
-    console.log(
-      'Navigation:',
-      route,
-      '| Current:',
-      currentPath,
-      '| Active:',
-      Boolean(isActive)
-    );
   });
+
+  const servicesDropdownBtn = document.getElementById('services-dropdown-btn');
+  if (servicesDropdownBtn && isServicePage) {
+    servicesDropdownBtn.classList.add('active-nav', 'text-blue-600');
+  }
+}
+
+// Mobile Services Accordion Submenu Toggle
+function toggleMobileServicesMenu() {
+  const submenu = document.getElementById('mobile-services-submenu');
+  const chevron = document.getElementById('mobile-services-chevron');
+  if (submenu) {
+    submenu.classList.toggle('hidden');
+  }
+  if (chevron) {
+    chevron.classList.toggle('rotate-180');
+  }
 }
 
 
@@ -166,9 +183,11 @@ function handleQuoteSubmit(event) {
   }
 }
 
-// Scroll Reveal Animations using IntersectionObserver
+// Scroll Reveal Animations using IntersectionObserver with Fallback
 function triggerRevealElements() {
   const reveals = document.querySelectorAll('.reveal');
+  if (!reveals.length) return;
+
   if (!('IntersectionObserver' in window)) {
     reveals.forEach((el) => el.classList.add('active'));
     return;
@@ -181,43 +200,88 @@ function triggerRevealElements() {
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
 
-  reveals.forEach((el) => observer.observe(el));
+  reveals.forEach((el) => {
+    // If element is already in viewport, activate immediately
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('active');
+    } else {
+      observer.observe(el);
+    }
+  });
+
+  // Safety fallback: reveal all elements after 1.2s to guarantee no content stays hidden
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.active)').forEach((el) => {
+      el.classList.add('active');
+    });
+  }, 1200);
 }
 
-// Animated Number Counters
+// Animated Number Counters with Instant Hero Viewport Support
 function animateCounters() {
   const counters = document.querySelectorAll('.counter');
   if (!counters.length) return;
+
+  function runCounter(counter, target) {
+    if (counter.dataset.animated === 'true') return;
+    counter.dataset.animated = 'true';
+    const duration = 1500;
+    const startTime = performance.now();
+
+    function updateCounter(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      counter.textContent = Math.floor(easeOut * target);
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.textContent = target;
+      }
+    }
+    requestAnimationFrame(updateCounter);
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    counters.forEach((c) => {
+      c.textContent = c.getAttribute('data-target') || '0';
+    });
+    return;
+  }
 
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const counter = entry.target;
         const target = parseInt(counter.getAttribute('data-target'), 10) || 0;
-        const duration = 1500;
-        const startTime = performance.now();
-
-        function updateCounter(currentTime) {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          const easeOut = 1 - Math.pow(1 - progress, 3);
-          counter.textContent = Math.floor(easeOut * target);
-
-          if (progress < 1) {
-            requestAnimationFrame(updateCounter);
-          } else {
-            counter.textContent = target;
-          }
-        }
-        requestAnimationFrame(updateCounter);
+        runCounter(counter, target);
         obs.unobserve(counter);
       }
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0.1 });
 
-  counters.forEach((c) => observer.observe(c));
+  counters.forEach((counter) => {
+    const target = parseInt(counter.getAttribute('data-target'), 10) || 0;
+    const rect = counter.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      runCounter(counter, target);
+    } else {
+      observer.observe(counter);
+    }
+  });
+
+  // Safety fallback after 2s
+  setTimeout(() => {
+    counters.forEach((c) => {
+      if (c.textContent === '0' || c.textContent === '') {
+        c.textContent = c.getAttribute('data-target') || '0';
+      }
+    });
+  }, 2000);
 }
 
 // Auto-fill selected service from URL on Contact Page
@@ -228,8 +292,8 @@ function autoFillService() {
     const select = document.getElementById('serviceSelect');
     if (select) {
       for (let i = 0; i < select.options.length; i++) {
-        if (select.options[i].value.toLowerCase().includes(service.toLowerCase()) || 
-            select.options[i].text.toLowerCase().includes(service.toLowerCase())) {
+        if (select.options[i].value.toLowerCase().includes(service.toLowerCase()) ||
+          select.options[i].text.toLowerCase().includes(service.toLowerCase())) {
           select.selectedIndex = i;
           break;
         }
