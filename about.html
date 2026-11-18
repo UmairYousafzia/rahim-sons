@@ -181,8 +181,7 @@
     </div>
 
     <!-- Main Navbar -->
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
-      aria-label="Main Navigation">
+    <nav class="max-w-9xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between" aria-label="Main Navigation">
 
       <!-- Brand Logo -->
       <a href="/" class="flex items-center gap-3 group focus:outline-none">
@@ -209,54 +208,90 @@
 
         <!-- Services Dropdown Container -->
         <div class="relative group" id="services-dropdown-container">
-          <button type="button" class="nav-link inline-flex items-center gap-1.5 py-1 text-sm font-medium text-slate-700 hover:text-blue-600 transition-colors focus:outline-none" aria-expanded="false" id="services-dropdown-btn">
+          <button type="button"
+            class="nav-link inline-flex items-center gap-1.5 py-1 text-sm font-medium text-slate-700 hover:text-blue-600 transition-colors focus:outline-none"
+            aria-expanded="false" id="services-dropdown-btn">
             <span>Services</span>
-            <svg class="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg
+              class="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-transform duration-200 group-hover:rotate-180"
+              fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-          <div class="absolute left-0 top-full pt-3 w-80 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50">
+          <div
+            class="absolute left-0 top-full pt-3 w-80 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50">
             <div class="bg-white rounded-2xl shadow-2xl border border-slate-200/90 p-2.5 space-y-1">
-              <a href="/solar-systems" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group/item">
-                <div class="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+              <a href="/solar-systems"
+                class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                <div
+                  class="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
                 </div>
                 <div>
-                  <span class="block font-display font-bold text-sm text-navy-900 group-hover/item:text-blue-600">Solar Power Systems</span>
+                  <span class="block font-display font-bold text-sm text-navy-900 group-hover/item:text-blue-600">Solar
+                    Power Systems</span>
                   <span class="block text-xs text-slate-500 mt-0.5">Hybrid, On-Grid &amp; Commercial Plants</span>
                 </div>
               </a>
-              <a href="/net-metering" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group/item">
-                <div class="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              <a href="/net-metering"
+                class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                <div
+                  class="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
                 </div>
                 <div>
-                  <span class="block font-display font-bold text-sm text-navy-900 group-hover/item:text-blue-600">Net-Metering Solutions</span>
+                  <span
+                    class="block font-display font-bold text-sm text-navy-900 group-hover/item:text-blue-600">Net-Metering
+                    Solutions</span>
                   <span class="block text-xs text-slate-500 mt-0.5">NEPRA &amp; IESCO Green Meter Licensing</span>
                 </div>
               </a>
-              <a href="/security-solutions" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group/item">
-                <div class="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              <a href="/security-solutions"
+                class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                <div
+                  class="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
                 </div>
                 <div>
-                  <span class="block font-display font-bold text-sm text-navy-900 group-hover/item:text-blue-600">Security &amp; CCTV Solutions</span>
+                  <span
+                    class="block font-display font-bold text-sm text-navy-900 group-hover/item:text-blue-600">Security
+                    &amp; CCTV Solutions</span>
                   <span class="block text-xs text-slate-500 mt-0.5">4K IP Cameras, Access Gates &amp; Alarms</span>
                 </div>
               </a>
-              <a href="/networking-solutions" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group/item">
-                <div class="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+              <a href="/networking-solutions"
+                class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                <div
+                  class="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                  </svg>
                 </div>
                 <div>
-                  <span class="block font-display font-bold text-sm text-navy-900 group-hover/item:text-blue-600">Enterprise Networking &amp; E&amp;M</span>
+                  <span
+                    class="block font-display font-bold text-sm text-navy-900 group-hover/item:text-blue-600">Enterprise
+                    Networking &amp; E&amp;M</span>
                   <span class="block text-xs text-slate-500 mt-0.5">Fiber Cabling, Racks &amp; Main LT Panels</span>
                 </div>
               </a>
               <div class="border-t border-slate-100 pt-1.5 mt-1">
-                <a href="/services" class="flex items-center justify-between px-3 py-2 rounded-xl bg-blue-50/70 hover:bg-blue-600 hover:text-white text-blue-700 font-display font-bold text-xs transition-all group/all">
+                <a href="/services"
+                  class="flex items-center justify-between px-3 py-2 rounded-xl bg-blue-50/70 hover:bg-blue-600 hover:text-white text-blue-700 font-display font-bold text-xs transition-all group/all">
                   <span>View All Services Overview</span>
-                  <svg class="w-4 h-4 transition-transform group-hover/all:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                  <svg class="w-4 h-4 transition-transform group-hover/all:translate-x-1" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -293,23 +328,40 @@
 
     <!-- Mobile Navigation Drawer -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-6 space-y-2">
-      <a href="/" data-route="home" class="block px-4 py-2.5 rounded-xl text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-blue-600">Home</a>
-      <a href="/about" data-route="about" class="block px-4 py-2.5 rounded-xl text-base font-medium text-blue-600 bg-blue-50/60 font-bold">About Us</a>
+      <a href="/" data-route="home"
+        class="block px-4 py-2.5 rounded-xl text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-blue-600">Home</a>
+      <a href="/about" data-route="about"
+        class="block px-4 py-2.5 rounded-xl text-base font-medium text-blue-600 bg-blue-50/60 font-bold">About Us</a>
       <div class="space-y-1">
-        <button type="button" onclick="toggleMobileServicesMenu()" class="w-full flex items-center justify-between px-4 py-2.5 rounded-xl text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-blue-600">
+        <button type="button" onclick="toggleMobileServicesMenu()"
+          class="w-full flex items-center justify-between px-4 py-2.5 rounded-xl text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-blue-600">
           <span class="font-semibold">Services</span>
-          <svg id="mobile-services-chevron" class="w-4 h-4 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+          <svg id="mobile-services-chevron" class="w-4 h-4 text-slate-400 transition-transform duration-200" fill="none"
+            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
         </button>
         <div id="mobile-services-submenu" class="hidden pl-4 pr-2 space-y-1 bg-slate-50 rounded-xl py-2">
-          <a href="/solar-systems" onclick="toggleMobileMenu(false)" class="block px-3 py-2 text-sm font-medium text-slate-700 hover:text-blue-600">⚡ Solar Power Systems</a>
-          <a href="/net-metering" onclick="toggleMobileMenu(false)" class="block px-3 py-2 text-sm font-medium text-slate-700 hover:text-blue-600">🔄 Net-Metering Solutions</a>
-          <a href="/security-solutions" onclick="toggleMobileMenu(false)" class="block px-3 py-2 text-sm font-medium text-slate-700 hover:text-blue-600">🛡️ Security &amp; CCTV Solutions</a>
-          <a href="/networking-solutions" onclick="toggleMobileMenu(false)" class="block px-3 py-2 text-sm font-medium text-slate-700 hover:text-blue-600">🌐 Enterprise Networking &amp; E&amp;M</a>
-          <a href="/services" onclick="toggleMobileMenu(false)" class="block px-3 py-2 text-xs font-bold text-blue-600 hover:text-blue-800 border-t border-slate-200/60 mt-1 pt-2">View All Services Overview →</a>
+          <a href="/solar-systems" onclick="toggleMobileMenu(false)"
+            class="block px-3 py-2 text-sm font-medium text-slate-700 hover:text-blue-600">⚡ Solar Power Systems</a>
+          <a href="/net-metering" onclick="toggleMobileMenu(false)"
+            class="block px-3 py-2 text-sm font-medium text-slate-700 hover:text-blue-600">🔄 Net-Metering Solutions</a>
+          <a href="/security-solutions" onclick="toggleMobileMenu(false)"
+            class="block px-3 py-2 text-sm font-medium text-slate-700 hover:text-blue-600">🛡️ Security &amp; CCTV
+            Solutions</a>
+          <a href="/networking-solutions" onclick="toggleMobileMenu(false)"
+            class="block px-3 py-2 text-sm font-medium text-slate-700 hover:text-blue-600">🌐 Enterprise Networking
+            &amp; E&amp;M</a>
+          <a href="/services" onclick="toggleMobileMenu(false)"
+            class="block px-3 py-2 text-xs font-bold text-blue-600 hover:text-blue-800 border-t border-slate-200/60 mt-1 pt-2">View
+            All Services Overview →</a>
         </div>
       </div>
-      <a href="/projects" data-route="projects" class="block px-4 py-2.5 rounded-xl text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-blue-600">Projects</a>
-      <a href="/contact" data-route="contact" class="block px-4 py-2.5 rounded-xl text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-blue-600">Contact Us</a>
+      <a href="/projects" data-route="projects"
+        class="block px-4 py-2.5 rounded-xl text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-blue-600">Projects</a>
+      <a href="/contact" data-route="contact"
+        class="block px-4 py-2.5 rounded-xl text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-blue-600">Contact
+        Us</a>
       <div class="pt-2">
         <a href="/contact" onclick="toggleMobileMenu(false);"
           class="block w-full text-center px-5 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-display font-bold text-sm shadow transition-colors">
