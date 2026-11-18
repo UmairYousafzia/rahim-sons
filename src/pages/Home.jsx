@@ -264,6 +264,47 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="py-16 bg-white border-y border-slate-200">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div className="lg:col-span-5">
+        <span className="text-blue-600 font-display font-bold text-xs uppercase tracking-widest">Go Solar</span>
+        <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-navy-900 mt-2 leading-tight">
+          Cut Your Electricity Bill and Sell Extra Units Back to IESCO
+        </h2>
+        <p className="text-slate-600 mt-4 leading-relaxed">
+          With a net-metered solar system, the power you don't use goes back to the grid and is credited
+          against your monthly bill. We size the system to your actual load, so you don't overpay for panels
+          you don't need.
+        </p>
+        <Link
+          to="/contact"
+          className="mt-6 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-display font-bold text-sm transition-all"
+        >
+          Get a Free Solar Quote
+        </Link>
+      </div>
+
+      <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover-lift">
+          <div className="font-display font-extrabold text-3xl text-blue-600">Up to 90%</div>
+          <p className="text-sm text-slate-600 mt-2 leading-relaxed">Reduction in monthly electricity bills, depending on system size and usage.</p>
+        </div>
+        <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover-lift">
+          <div className="font-display font-extrabold text-3xl text-blue-600">3–4 Years</div>
+          <p className="text-sm text-slate-600 mt-2 leading-relaxed">Typical payback period for on-grid systems at current tariffs.</p>
+        </div>
+        <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover-lift">
+          <div className="font-display font-extrabold text-3xl text-blue-600">25 Years</div>
+          <p className="text-sm text-slate-600 mt-2 leading-relaxed">Panel performance warranty on Tier-1 modules.</p>
+        </div>
+      </div>
+    </div>
+    <p className="text-xs text-slate-400 mt-5">
+      Figures are typical estimates. Your actual savings depend on roof area, sunlight, load, and tariff slab.
+    </p>
+  </div>
+</section>
 
       {/* Why Choose Rahim & Sons Section */}
       <section className="py-20 sm:py-24 bg-white">
@@ -346,6 +387,82 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-20 sm:py-24 bg-slate-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center max-w-3xl mx-auto">
+      <span className="text-blue-600 font-display font-bold text-xs uppercase tracking-widest">How It Works</span>
+      <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-navy-900 mt-2">
+        From Site Survey to Commissioning in Four Steps
+      </h2>
+      <p className="text-slate-600 mt-4 text-base sm:text-lg">
+        A clear, documented process, so you always know what happens next.
+      </p>
+    </div>
+
+    <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
+      {[
+        {
+          step: '1',
+          title: 'Site Survey',
+          text: 'Our engineers visit your site, check your load, roof or rack space, and existing wiring.',
+        },
+        {
+          step: '2',
+          title: 'Design & Quotation',
+          text: 'You receive engineering drawings, a bill of materials, and a transparent price with no hidden costs.',
+        },
+        {
+          step: '3',
+          title: 'Installation',
+          text: 'Certified technicians install, test, and label everything to PEC and IEC safety standards.',
+        },
+        {
+          step: '4',
+          title: 'Approval & Handover',
+          text: 'We handle NEPRA/IESCO paperwork where needed, commission the system, and train your team.',
+        },
+      ].map((item) => (
+        <div key={item.step} className="relative bg-white rounded-2xl border border-slate-200/80 p-6 shadow-sm hover-lift">
+          <div className="w-11 h-11 rounded-xl bg-blue-600 text-white flex items-center justify-center font-display font-extrabold text-lg">
+            {item.step}
+          </div>
+          <h3 className="font-display font-bold text-lg text-navy-900 mt-4">{item.title}</h3>
+          <p className="text-sm text-slate-600 mt-2 leading-relaxed">{item.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section className="py-20 sm:py-24 bg-navy-900 text-white relative overflow-hidden">
+  <div className="absolute inset-0 bg-engineering-grid opacity-30"></div>
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-3xl">
+      <span className="text-blue-400 font-display font-bold text-xs uppercase tracking-widest">Who We Serve</span>
+      <h2 className="font-display font-extrabold text-3xl sm:text-4xl mt-2">
+        Systems Built for the Way Your Business Runs
+      </h2>
+    </div>
+
+    <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {[
+        { name: 'Homes & Societies', text: 'Hybrid solar with battery backup, home CCTV, and Wi-Fi coverage for every room.' },
+        { name: 'Offices & Plazas', text: 'Net-metered solar, structured cabling, access control, and server room setup.' },
+        { name: 'Factories & Warehouses', text: 'Large on-grid plants, industrial CCTV, electrical panels, and load management.' },
+        { name: 'Schools & Hospitals', text: 'Reliable backup power, campus-wide networking, and fire detection systems.' },
+        { name: 'Banks & Retail Chains', text: 'Multi-branch CCTV, biometric attendance, and secure network infrastructure.' },
+        { name: 'Mosques & Institutions', text: 'Cost-saving solar systems and lighting designed for long-term low maintenance.' },
+      ].map((item) => (
+        <div key={item.name} className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
+          <h3 className="font-display font-bold text-lg text-white">{item.name}</h3>
+          <p className="text-sm text-slate-300 mt-2 leading-relaxed">{item.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
       {/* Featured Projects Showcase Section */}
       <section className="py-20 sm:py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -422,6 +539,100 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* ---------- 4. Testimonials ---------- */}
+{/* NOTE: Replace these with real client reviews (with permission) before publishing. */}
+<section className="py-20 sm:py-24 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center max-w-3xl mx-auto">
+      <span className="text-blue-600 font-display font-bold text-xs uppercase tracking-widest">Client Feedback</span>
+      <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-navy-900 mt-2">
+        What Our Clients Say
+      </h2>
+    </div>
+
+    <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-7">
+      {[
+        {
+          quote: 'The team finished our 50kW installation on schedule and got the green meter approved without us chasing IESCO.',
+          name: 'Client Name',
+          role: 'Business Owner, Islamabad',
+        },
+        {
+          quote: 'Our office network and CCTV were set up cleanly, with neat racks and clear documentation. Support has been quick whenever we call.',
+          name: 'Client Name',
+          role: 'IT Manager, Blue Area',
+        },
+        {
+          quote: 'Our electricity bill dropped sharply after the hybrid system went in, and the backup runs through load-shedding without a hitch.',
+          name: 'Client Name',
+          role: 'Homeowner, G-13',
+        },
+      ].map((t, i) => (
+        <figure key={i} className="p-7 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col">
+          <blockquote className="text-slate-700 leading-relaxed flex-grow">“{t.quote}”</blockquote>
+          <figcaption className="mt-5 pt-4 border-t border-slate-200">
+            <div className="font-display font-bold text-navy-900 text-sm">{t.name}</div>
+            <div className="text-xs text-slate-500 mt-0.5">{t.role}</div>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+{/* ---------- 5. FAQ ---------- */}
+<section className="py-20 sm:py-24 bg-slate-50">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center">
+      <span className="text-blue-600 font-display font-bold text-xs uppercase tracking-widest">FAQ</span>
+      <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-navy-900 mt-2">
+        Common Questions
+      </h2>
+    </div>
+
+    <div className="mt-10 space-y-4">
+      {[
+        {
+          q: 'How long does net-metering approval take?',
+          a: 'Timelines depend on IESCO and NEPRA processing. We prepare and submit the complete file, follow up on your behalf, and keep you updated at each stage.',
+        },
+        {
+          q: 'Which solar system is right for me: on-grid, hybrid, or off-grid?',
+          a: 'On-grid suits most daytime users who want the lowest cost. Hybrid adds battery backup for load-shedding. Off-grid is for locations with no grid access. We recommend one after reviewing your load.',
+        },
+        {
+          q: 'Do you provide a warranty and after-sales service?',
+          a: 'Yes. Equipment carries manufacturer warranties, and we offer maintenance visits and on-site troubleshooting after handover.',
+        },
+        {
+          q: 'Do you work outside Islamabad?',
+          a: 'Yes. We serve Islamabad, Rawalpindi, and clients nationwide on larger projects. Contact us with your location and requirements.',
+        },
+        {
+          q: 'Is the site survey really free?',
+          a: 'Yes. The initial technical assessment and quotation are free, with no obligation to proceed.',
+        },
+      ].map((item, i) => (
+        <details key={i} className="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-md transition-shadow">
+          <summary className="flex items-center justify-between gap-4 cursor-pointer list-none font-display font-bold text-navy-900">
+            <span>{item.q}</span>
+            <svg
+              className="w-5 h-5 shrink-0 text-blue-600 transition-transform group-open:rotate-45"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14M5 12h14" />
+            </svg>
+          </summary>
+          <p className="text-sm text-slate-600 mt-3 leading-relaxed">{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Call To Action Banner */}
       <section className="bg-navy-900 py-16 relative overflow-hidden">
