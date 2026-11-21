@@ -60,6 +60,7 @@ export default function Footer() {
               <li><Link to="/security-solutions" className="hover:text-blue-400 transition-colors">Security &amp; IP CCTV Surveillance</Link></li>
               <li><Link to="/networking-solutions" className="hover:text-blue-400 transition-colors">Enterprise Networking &amp; Fiber</Link></li>
               <li><Link to="/networking-solutions" className="hover:text-blue-400 transition-colors">Electrical &amp; Mechanical Works</Link></li>
+              <li><Link to="/civil-construction" className="hover:text-blue-400 transition-colors">Civil &amp; Construction Works</Link></li>
             </ul>
           </div>
 

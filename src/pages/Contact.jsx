@@ -22,6 +22,7 @@ export default function Contact() {
         'Net-Metering Solutions',
         'Security Solutions',
         'Networking & E&M Solutions',
+        'Civil & Construction Works',
         'Complete Turnkey Project'
       ];
       const match = options.find((opt) => opt.toLowerCase().includes(serviceParam.toLowerCase()));
@@ -234,6 +235,7 @@ export default function Contact() {
                         <option value="Net-Metering Solutions">Net-Metering &amp; Green Meter</option>
                         <option value="Security Solutions">Security &amp; IP CCTV Solutions</option>
                         <option value="Networking & E&M Solutions">Networking &amp; Electrical/Mechanical Works</option>
+                        <option value="Civil & Construction Works">Civil &amp; Construction Works</option>
                         <option value="Complete Turnkey Project">Complete Turnkey Package</option>
                       </select>
                     </div>

@@ -60,6 +60,26 @@ const projectsData = [
     badgeClass: 'bg-navy-900 text-blue-400',
     image: '/assets/images/security.jpg',
     description: 'Multi-floor addressable smoke detection system integrated with magnetic door access controllers and emergency alarms.'
+  },
+  {
+    id: 7,
+    title: 'Multi-Storey Commercial Plaza & RCC Framework',
+    location: 'Gulberg Greens, Islamabad',
+    category: 'civil',
+    badgeText: 'Civil & Construction',
+    badgeClass: 'bg-navy-900 text-blue-400',
+    image: '/assets/images/construction.png',
+    description: 'Turnkey structural RCC grey framework, raft foundation with subterranean retaining walls, and complete MEP conduit integration.'
+  },
+  {
+    id: 8,
+    title: 'Luxury 1-Kanal Designer Villa Construction',
+    location: 'Sector B-17, Islamabad',
+    category: 'civil',
+    badgeText: 'Civil & Construction',
+    badgeClass: 'bg-blue-600 text-white',
+    image: '/assets/images/construction.png',
+    description: 'Complete architectural layout, high-tensile Grade-60 steel rebar structure, premium porcelain finishing, and solar-ready roof.'
   }
 ];
 
@@ -79,7 +99,7 @@ export default function Projects() {
           <span className="text-blue-400 font-display font-bold text-xs uppercase tracking-widest">Our Portfolio</span>
           <h1 className="font-display font-extrabold text-3xl sm:text-5xl mt-2">Engineering Projects &amp; Case Studies</h1>
           <p className="text-slate-300 mt-3 max-w-2xl text-base sm:text-lg">
-            Explore our completed installations across Islamabad, Rawalpindi, and Punjab across Solar, Net-Metering,
+            Explore our completed installations across Islamabad, Rawalpindi, and Punjab across Civil Construction, Solar, Net-Metering,
             Security, and IT Networking domains.
           </p>
         </div>
@@ -129,6 +149,16 @@ export default function Projects() {
               }`}
             >
               Networking &amp; E&amp;M
+            </button>
+            <button
+              onClick={() => setActiveCategory('civil')}
+              className={`px-5 py-2.5 rounded-xl text-sm font-display font-bold transition-all ${
+                activeCategory === 'civil'
+                  ? 'bg-navy-900 text-white'
+                  : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+              }`}
+            >
+              Civil &amp; Construction
             </button>
           </div>
 

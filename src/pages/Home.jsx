@@ -9,7 +9,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <img
             src="/assets/images/solar-1.jpg"
-            alt="Rahim & Sons Solar and Electrical Engineering"
+            alt="Rahim & Sons Solar, Civil, and Electrical Engineering"
             className="w-full h-full object-cover opacity-25 mix-blend-luminosity"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-900/95 to-navy-900/80"></div>
@@ -22,20 +22,20 @@ export default function Home() {
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-200 text-xs font-semibold uppercase tracking-wider">
                 <span className="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
-                <span>Trusted Engineering Partner in Islamabad &amp; Nationwide</span>
+                <span>Trusted Engineering & Construction Partner in Islamabad & Nationwide</span>
               </div>
 
               <h1 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-tight">
-                Rahim &amp; Sons Enterprises
+                Rahim & Sons Enterprises
                 <span className="block text-blue-400 mt-2 text-2xl sm:text-4xl lg:text-[42px] font-bold">
-                  An Electrical &amp; Mechanical Solutions Provider
+                  Civil, Electrical & Mechanical Solutions Provider
                 </span>
               </h1>
 
               <p className="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
-                Delivering turnkey clean energy Solar Systems, NEPRA-certified Net-Metering, intelligent IP Security
-                Surveillance, and high-speed Enterprise Networking infrastructure for residential, commercial, and
-                industrial clients.
+                Delivering turnkey Civil & Construction Works, clean energy Solar Systems, NEPRA-certified
+                Net-Metering, intelligent IP Security Surveillance, and high-speed Enterprise Networking infrastructure
+                for residential, commercial, and industrial clients.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -116,17 +116,19 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto">
             <span className="text-blue-600 font-display font-bold text-xs uppercase tracking-widest">What We Do</span>
             <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-navy-900 mt-2">
-              Integrated Electrical, Mechanical &amp; Smart Technology Solutions
+              Integrated Civil, Electrical, Mechanical & Smart Technology Solutions
             </h2>
             <p className="text-slate-600 mt-4 text-base sm:text-lg">
-              From clean solar energy generation to enterprise security and fiber networking, we engineer reliable systems
-              built for long-term performance.
+              From turnkey building construction and clean solar energy to enterprise security and fiber networking, we
+              engineer reliable infrastructure built for long-term performance.
             </p>
           </div>
 
-          {/* 4 Primary Service Cards */}
-          <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
-            {/* Card 1: Solar Systems */}
+          {/* 5 Primary Service Cards */}
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+
+            {/* Card 2: Solar Systems */}
             <div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col hover-lift">
               <div className="h-44 overflow-hidden relative bg-navy-900">
                 <img
@@ -160,7 +162,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 2: Net-Metering */}
+            {/* Card 3: Net-Metering */}
             <div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col hover-lift">
               <div className="h-44 overflow-hidden relative bg-navy-900">
                 <img
@@ -179,7 +181,7 @@ export default function Home() {
                   Net-Metering
                 </h3>
                 <p className="text-slate-600 text-sm mt-2.5 leading-relaxed flex-grow">
-                  End-to-end NEPRA &amp; IESCO green meter licensing, earthing compliance, bidirectional meter installation,
+                  End-to-end NEPRA & IESCO green meter licensing, earthing compliance, bidirectional meter installation,
                   and grid synchronization.
                 </p>
                 <Link
@@ -194,7 +196,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 3: Security Solutions */}
+            {/* Card 4: Security Solutions */}
             <div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col hover-lift">
               <div className="h-44 overflow-hidden relative bg-navy-900">
                 <img
@@ -228,7 +230,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 4: Networking Solutions */}
+            {/* Card 5: Networking Solutions */}
             <div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col hover-lift">
               <div className="h-44 overflow-hidden relative bg-navy-900">
                 <img
@@ -261,50 +263,85 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+
+            {/* Card 1: Civil & Construction Works */}
+            <div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col hover-lift">
+              <div className="h-44 overflow-hidden relative bg-navy-900">
+                <img
+                  src="/assets/images/construction.png"
+                  alt="Civil and Construction Works"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-3 left-3 w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6 flex-grow flex flex-col">
+                <h3 className="font-display font-bold text-xl text-navy-900 group-hover:text-blue-600 transition-colors">
+                  Civil & Construction Works
+                </h3>
+                <p className="text-slate-600 text-sm mt-2.5 leading-relaxed flex-grow">
+                  Residential and commercial building construction, structural design, RCC works, foundations,
+                  infrastructure development, and turnkey construction project management.
+                </p>
+                <Link
+                  to="/civil-construction"
+                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-display font-bold text-navy-900 group-hover:text-blue-600"
+                >
+                  <span>Learn More</span>
+                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section className="py-16 bg-white border-y border-slate-200">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-      <div className="lg:col-span-5">
-        <span className="text-blue-600 font-display font-bold text-xs uppercase tracking-widest">Go Solar</span>
-        <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-navy-900 mt-2 leading-tight">
-          Cut Your Electricity Bill and Sell Extra Units Back to IESCO
-        </h2>
-        <p className="text-slate-600 mt-4 leading-relaxed">
-          With a net-metered solar system, the power you don't use goes back to the grid and is credited
-          against your monthly bill. We size the system to your actual load, so you don't overpay for panels
-          you don't need.
-        </p>
-        <Link
-          to="/contact"
-          className="mt-6 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-display font-bold text-sm transition-all"
-        >
-          Get a Free Solar Quote
-        </Link>
-      </div>
 
-      <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-5">
-        <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover-lift">
-          <div className="font-display font-extrabold text-3xl text-blue-600">Up to 90%</div>
-          <p className="text-sm text-slate-600 mt-2 leading-relaxed">Reduction in monthly electricity bills, depending on system size and usage.</p>
+      <section className="py-16 bg-white border-y border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-5">
+              <span className="text-blue-600 font-display font-bold text-xs uppercase tracking-widest">Go Solar</span>
+              <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-navy-900 mt-2 leading-tight">
+                Cut Your Electricity Bill and Sell Extra Units Back to IESCO
+              </h2>
+              <p className="text-slate-600 mt-4 leading-relaxed">
+                With a net-metered solar system, the power you don't use goes back to the grid and is credited
+                against your monthly bill. We size the system to your actual load, so you don't overpay for panels
+                you don't need.
+              </p>
+              <Link
+                to="/contact"
+                className="mt-6 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-display font-bold text-sm transition-all"
+              >
+                Get a Free Solar Quote
+              </Link>
+            </div>
+
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-5">
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover-lift">
+                <div className="font-display font-extrabold text-3xl text-blue-600">Up to 90%</div>
+                <p className="text-sm text-slate-600 mt-2 leading-relaxed">Reduction in monthly electricity bills, depending on system size and usage.</p>
+              </div>
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover-lift">
+                <div className="font-display font-extrabold text-3xl text-blue-600">3–4 Years</div>
+                <p className="text-sm text-slate-600 mt-2 leading-relaxed">Typical payback period for on-grid systems at current tariffs.</p>
+              </div>
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover-lift">
+                <div className="font-display font-extrabold text-3xl text-blue-600">25 Years</div>
+                <p className="text-sm text-slate-600 mt-2 leading-relaxed">Panel performance warranty on Tier-1 modules.</p>
+              </div>
+            </div>
+          </div>
+          <p className="text-xs text-slate-400 mt-5">
+            Figures are typical estimates. Your actual savings depend on roof area, sunlight, load, and tariff slab.
+          </p>
         </div>
-        <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover-lift">
-          <div className="font-display font-extrabold text-3xl text-blue-600">3–4 Years</div>
-          <p className="text-sm text-slate-600 mt-2 leading-relaxed">Typical payback period for on-grid systems at current tariffs.</p>
-        </div>
-        <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover-lift">
-          <div className="font-display font-extrabold text-3xl text-blue-600">25 Years</div>
-          <p className="text-sm text-slate-600 mt-2 leading-relaxed">Panel performance warranty on Tier-1 modules.</p>
-        </div>
-      </div>
-    </div>
-    <p className="text-xs text-slate-400 mt-5">
-      Figures are typical estimates. Your actual savings depend on roof area, sunlight, load, and tariff slab.
-    </p>
-  </div>
-</section>
+      </section>
 
       {/* Why Choose Rahim & Sons Section */}
       <section className="py-20 sm:py-24 bg-white">
@@ -314,17 +351,17 @@ export default function Home() {
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200">
                 <img
                   src="/assets/images/5gridpanel.jpg"
-                  alt="Electrical and Mechanical Engineers"
+                  alt="Civil, Electrical and Mechanical Engineers"
                   className="w-full h-[380px] sm:h-[440px] object-cover"
                 />
                 <div className="absolute bottom-5 left-5 right-5 bg-navy-900/95 text-white p-5 rounded-xl border border-white/10 backdrop-blur-md">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-display font-extrabold text-xl shrink-0">
-                      E&amp;M
+                    <div className="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-display font-extrabold text-lg shrink-0">
+                      CE&M
                     </div>
                     <div>
                       <h4 className="font-display font-bold text-base">Certified Engineering Standards</h4>
-                      <p className="text-xs text-slate-300 mt-0.5">Strict adherence to PEC, NEPRA, and IEC safety &amp; quality protocols.</p>
+                      <p className="text-xs text-slate-300 mt-0.5">Strict adherence to PEC, NEPRA, and IEC safety & quality protocols.</p>
                     </div>
                   </div>
                 </div>
@@ -337,18 +374,19 @@ export default function Home() {
                 Precision Engineering Backed by Reliable After-Sales Support
               </h2>
               <p className="text-slate-600 text-base leading-relaxed">
-                At <strong>Rahim &amp; Sons Enterprises</strong>, we combine deep electrical and mechanical expertise with
-                modern smart infrastructure to eliminate energy losses, downtime, and security blind spots.
+                At <strong>Rahim & Sons Enterprises</strong>, we combine deep civil, electrical, and mechanical
+                expertise with modern smart infrastructure to eliminate energy losses, downtime, and structural or
+                security blind spots.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/70">
                   <h4 className="font-display font-bold text-navy-900 text-base flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
-                    Tier-1 Equipment Only
+                    Tier-1 Materials & Equipment
                   </h4>
                   <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
-                    Genuine A-grade solar panels, hybrid inverters, Hikvision/Dahua IP cameras, and certified networking gear.
+                    Certified structural materials, A-grade solar panels, hybrid inverters, Hikvision/Dahua IP cameras, and enterprise networking gear.
                   </p>
                 </div>
 
@@ -368,7 +406,7 @@ export default function Home() {
                     Turnkey Delivery
                   </h4>
                   <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
-                    From engineering drawings and load calculations to civil mountings and final electrical certification.
+                    From architectural/structural drawings and RCC foundations to solar mountings and final commissioning.
                   </p>
                 </div>
 
@@ -388,80 +426,79 @@ export default function Home() {
       </section>
 
       <section className="py-20 sm:py-24 bg-slate-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center max-w-3xl mx-auto">
-      <span className="text-blue-600 font-display font-bold text-xs uppercase tracking-widest">How It Works</span>
-      <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-navy-900 mt-2">
-        From Site Survey to Commissioning in Four Steps
-      </h2>
-      <p className="text-slate-600 mt-4 text-base sm:text-lg">
-        A clear, documented process, so you always know what happens next.
-      </p>
-    </div>
-
-    <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
-      {[
-        {
-          step: '1',
-          title: 'Site Survey',
-          text: 'Our engineers visit your site, check your load, roof or rack space, and existing wiring.',
-        },
-        {
-          step: '2',
-          title: 'Design & Quotation',
-          text: 'You receive engineering drawings, a bill of materials, and a transparent price with no hidden costs.',
-        },
-        {
-          step: '3',
-          title: 'Installation',
-          text: 'Certified technicians install, test, and label everything to PEC and IEC safety standards.',
-        },
-        {
-          step: '4',
-          title: 'Approval & Handover',
-          text: 'We handle NEPRA/IESCO paperwork where needed, commission the system, and train your team.',
-        },
-      ].map((item) => (
-        <div key={item.step} className="relative bg-white rounded-2xl border border-slate-200/80 p-6 shadow-sm hover-lift">
-          <div className="w-11 h-11 rounded-xl bg-blue-600 text-white flex items-center justify-center font-display font-extrabold text-lg">
-            {item.step}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto">
+            <span className="text-blue-600 font-display font-bold text-xs uppercase tracking-widest">How It Works</span>
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-navy-900 mt-2">
+              From Site Survey to Commissioning in Four Steps
+            </h2>
+            <p className="text-slate-600 mt-4 text-base sm:text-lg">
+              A clear, documented process, so you always know what happens next.
+            </p>
           </div>
-          <h3 className="font-display font-bold text-lg text-navy-900 mt-4">{item.title}</h3>
-          <p className="text-sm text-slate-600 mt-2 leading-relaxed">{item.text}</p>
+
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
+            {[
+              {
+                step: '1',
+                title: 'Site Survey',
+                text: 'Our engineers visit your site, inspect soil/structural conditions, load, roof or rack space, and existing wiring.',
+              },
+              {
+                step: '2',
+                title: 'Design & Quotation',
+                text: 'You receive engineering drawings, a bill of materials, and a transparent price with no hidden costs.',
+              },
+              {
+                step: '3',
+                title: 'Construction & Installation',
+                text: 'Certified engineers and technicians execute, test, and label everything to PEC and IEC safety standards.',
+              },
+              {
+                step: '4',
+                title: 'Approval & Handover',
+                text: 'We handle NEPRA/IESCO paperwork where needed, commission the system, and train your team.',
+              },
+            ].map((item) => (
+              <div key={item.step} className="relative bg-white rounded-2xl border border-slate-200/80 p-6 shadow-sm hover-lift">
+                <div className="w-11 h-11 rounded-xl bg-blue-600 text-white flex items-center justify-center font-display font-extrabold text-lg">
+                  {item.step}
+                </div>
+                <h3 className="font-display font-bold text-lg text-navy-900 mt-4">{item.title}</h3>
+                <p className="text-sm text-slate-600 mt-2 leading-relaxed">{item.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
-<section className="py-20 sm:py-24 bg-navy-900 text-white relative overflow-hidden">
-  <div className="absolute inset-0 bg-engineering-grid opacity-30"></div>
-  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="max-w-3xl">
-      <span className="text-blue-400 font-display font-bold text-xs uppercase tracking-widest">Who We Serve</span>
-      <h2 className="font-display font-extrabold text-3xl sm:text-4xl mt-2">
-        Systems Built for the Way Your Business Runs
-      </h2>
-    </div>
+      <section className="py-20 sm:py-24 bg-navy-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-engineering-grid opacity-30"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <span className="text-blue-400 font-display font-bold text-xs uppercase tracking-widest">Who We Serve</span>
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl mt-2">
+              Systems & Structures Built for the Way You Operate
+            </h2>
+          </div>
 
-    <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {[
-        { name: 'Homes & Societies', text: 'Hybrid solar with battery backup, home CCTV, and Wi-Fi coverage for every room.' },
-        { name: 'Offices & Plazas', text: 'Net-metered solar, structured cabling, access control, and server room setup.' },
-        { name: 'Factories & Warehouses', text: 'Large on-grid plants, industrial CCTV, electrical panels, and load management.' },
-        { name: 'Schools & Hospitals', text: 'Reliable backup power, campus-wide networking, and fire detection systems.' },
-        { name: 'Banks & Retail Chains', text: 'Multi-branch CCTV, biometric attendance, and secure network infrastructure.' },
-        { name: 'Mosques & Institutions', text: 'Cost-saving solar systems and lighting designed for long-term low maintenance.' },
-      ].map((item) => (
-        <div key={item.name} className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
-          <h3 className="font-display font-bold text-lg text-white">{item.name}</h3>
-          <p className="text-sm text-slate-300 mt-2 leading-relaxed">{item.text}</p>
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { name: 'Homes & Societies', text: 'Turnkey residential construction, hybrid solar with battery backup, home CCTV, and full-home Wi-Fi.' },
+              { name: 'Offices & Plazas', text: 'Commercial building execution, net-metered solar, structured cabling, access control, and server rooms.' },
+              { name: 'Factories & Warehouses', text: 'Industrial civil foundations, large on-grid plants, CCTV, electrical panels, and load management.' },
+              { name: 'Schools & Hospitals', text: 'Purpose-built infrastructure, reliable backup power, campus-wide networking, and fire detection.' },
+              { name: 'Banks & Retail Chains', text: 'Multi-branch fit-outs, CCTV, biometric attendance, and secure network infrastructure.' },
+              { name: 'Mosques & Institutions', text: 'Structural development, cost-saving solar systems, and lighting designed for low maintenance.' },
+            ].map((item) => (
+              <div key={item.name} className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
+                <h3 className="font-display font-bold text-lg text-white">{item.name}</h3>
+                <p className="text-sm text-slate-300 mt-2 leading-relaxed">{item.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* Featured Projects Showcase Section */}
       <section className="py-20 sm:py-24 bg-slate-50">
@@ -485,9 +522,9 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-7">
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm group hover-lift">
-              <div className="h-56 overflow-hidden relative">
+              <div className="h-52 overflow-hidden relative">
                 <img
                   src="/assets/images/5gridpanel.jpg"
                   alt="50kW Commercial Solar & Net Metering"
@@ -498,13 +535,30 @@ export default function Home() {
                 </span>
               </div>
               <div className="p-5">
-                <h3 className="font-display font-bold text-lg text-navy-900">50kW Commercial On-Grid System</h3>
+                <h3 className="font-display font-bold text-base text-navy-900 line-clamp-1">50kW Commercial On-Grid System</h3>
                 <p className="text-xs text-slate-500 mt-1">E-11 Markaz, Islamabad • IESCO Green Meter Active</p>
               </div>
             </div>
 
             <div className="rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm group hover-lift">
-              <div className="h-56 overflow-hidden relative">
+              <div className="h-52 overflow-hidden relative">
+                <img
+                  src="/assets/images/construction.png"
+                  alt="Commercial Plaza Civil & Construction"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <span className="absolute top-3 right-3 px-3 py-1 rounded-full bg-navy-900/90 text-blue-400 text-xs font-semibold">
+                  Civil &amp; Construction
+                </span>
+              </div>
+              <div className="p-5">
+                <h3 className="font-display font-bold text-base text-navy-900 line-clamp-1">Multi-Storey Commercial Plaza</h3>
+                <p className="text-xs text-slate-500 mt-1">Gulberg Greens, Islamabad • Turnkey RCC Framework</p>
+              </div>
+            </div>
+
+            <div className="rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm group hover-lift">
+              <div className="h-52 overflow-hidden relative">
                 <img
                   src="/assets/images/FiberBackbone.jpg"
                   alt="Enterprise Fiber & Data Rack"
@@ -515,13 +569,13 @@ export default function Home() {
                 </span>
               </div>
               <div className="p-5">
-                <h3 className="font-display font-bold text-lg text-navy-900">Corporate Server Room &amp; Fiber Backbone</h3>
+                <h3 className="font-display font-bold text-base text-navy-900 line-clamp-1">Corporate Server Room &amp; Fiber</h3>
                 <p className="text-xs text-slate-500 mt-1">Blue Area, Islamabad • 120 Nodes Structured Cabling</p>
               </div>
             </div>
 
             <div className="rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm group hover-lift">
-              <div className="h-56 overflow-hidden relative">
+              <div className="h-52 overflow-hidden relative">
                 <img
                   src="/assets/images/cameraa.jpg"
                   alt="Industrial IP CCTV Surveillance"
@@ -532,107 +586,107 @@ export default function Home() {
                 </span>
               </div>
               <div className="p-5">
-                <h3 className="font-display font-bold text-lg text-navy-900">64-Channel IP CCTV &amp; Biometric Access</h3>
+                <h3 className="font-display font-bold text-base text-navy-900 line-clamp-1">64-Channel IP CCTV &amp; Access</h3>
                 <p className="text-xs text-slate-500 mt-1">I-9 Industrial Area, Islamabad • 24/7 Control Room</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       {/* ---------- 4. Testimonials ---------- */}
-{/* NOTE: Replace these with real client reviews (with permission) before publishing. */}
-<section className="py-20 sm:py-24 bg-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center max-w-3xl mx-auto">
-      <span className="text-blue-600 font-display font-bold text-xs uppercase tracking-widest">Client Feedback</span>
-      <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-navy-900 mt-2">
-        What Our Clients Say
-      </h2>
-    </div>
+      {/* NOTE: Replace these with real client reviews (with permission) before publishing. */}
+      <section className="py-20 sm:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto">
+            <span className="text-blue-600 font-display font-bold text-xs uppercase tracking-widest">Client Feedback</span>
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-navy-900 mt-2">
+              What Our Clients Say
+            </h2>
+          </div>
 
-    <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-7">
-      {[
-        {
-          quote: 'The team finished our 50kW installation on schedule and got the green meter approved without us chasing IESCO.',
-          name: 'Client Name',
-          role: 'Business Owner, Islamabad',
-        },
-        {
-          quote: 'Our office network and CCTV were set up cleanly, with neat racks and clear documentation. Support has been quick whenever we call.',
-          name: 'Client Name',
-          role: 'IT Manager, Blue Area',
-        },
-        {
-          quote: 'Our electricity bill dropped sharply after the hybrid system went in, and the backup runs through load-shedding without a hitch.',
-          name: 'Client Name',
-          role: 'Homeowner, G-13',
-        },
-      ].map((t, i) => (
-        <figure key={i} className="p-7 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col">
-          <blockquote className="text-slate-700 leading-relaxed flex-grow">“{t.quote}”</blockquote>
-          <figcaption className="mt-5 pt-4 border-t border-slate-200">
-            <div className="font-display font-bold text-navy-900 text-sm">{t.name}</div>
-            <div className="text-xs text-slate-500 mt-0.5">{t.role}</div>
-          </figcaption>
-        </figure>
-      ))}
-    </div>
-  </div>
-</section>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-7">
+            {[
+              {
+                quote: 'The team finished our 50kW installation on schedule and got the green meter approved without us chasing IESCO.',
+                name: 'Client Name',
+                role: 'Business Owner, Islamabad',
+              },
+              {
+                quote: 'Our office network and CCTV were set up cleanly, with neat racks and clear documentation. Support has been quick whenever we call.',
+                name: 'Client Name',
+                role: 'IT Manager, Blue Area',
+              },
+              {
+                quote: 'Our electricity bill dropped sharply after the hybrid system went in, and the backup runs through load-shedding without a hitch.',
+                name: 'Client Name',
+                role: 'Homeowner, G-13',
+              },
+            ].map((t, i) => (
+              <figure key={i} className="p-7 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col">
+                <blockquote className="text-slate-700 leading-relaxed flex-grow">“{t.quote}”</blockquote>
+                <figcaption className="mt-5 pt-4 border-t border-slate-200">
+                  <div className="font-display font-bold text-navy-900 text-sm">{t.name}</div>
+                  <div className="text-xs text-slate-500 mt-0.5">{t.role}</div>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      {/* ---------- 5. FAQ ---------- */}
+      <section className="py-20 sm:py-24 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <span className="text-blue-600 font-display font-bold text-xs uppercase tracking-widest">FAQ</span>
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-navy-900 mt-2">
+              Common Questions
+            </h2>
+          </div>
 
-{/* ---------- 5. FAQ ---------- */}
-<section className="py-20 sm:py-24 bg-slate-50">
-  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center">
-      <span className="text-blue-600 font-display font-bold text-xs uppercase tracking-widest">FAQ</span>
-      <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-navy-900 mt-2">
-        Common Questions
-      </h2>
-    </div>
-
-    <div className="mt-10 space-y-4">
-      {[
-        {
-          q: 'How long does net-metering approval take?',
-          a: 'Timelines depend on IESCO and NEPRA processing. We prepare and submit the complete file, follow up on your behalf, and keep you updated at each stage.',
-        },
-        {
-          q: 'Which solar system is right for me: on-grid, hybrid, or off-grid?',
-          a: 'On-grid suits most daytime users who want the lowest cost. Hybrid adds battery backup for load-shedding. Off-grid is for locations with no grid access. We recommend one after reviewing your load.',
-        },
-        {
-          q: 'Do you provide a warranty and after-sales service?',
-          a: 'Yes. Equipment carries manufacturer warranties, and we offer maintenance visits and on-site troubleshooting after handover.',
-        },
-        {
-          q: 'Do you work outside Islamabad?',
-          a: 'Yes. We serve Islamabad, Rawalpindi, and clients nationwide on larger projects. Contact us with your location and requirements.',
-        },
-        {
-          q: 'Is the site survey really free?',
-          a: 'Yes. The initial technical assessment and quotation are free, with no obligation to proceed.',
-        },
-      ].map((item, i) => (
-        <details key={i} className="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-md transition-shadow">
-          <summary className="flex items-center justify-between gap-4 cursor-pointer list-none font-display font-bold text-navy-900">
-            <span>{item.q}</span>
-            <svg
-              className="w-5 h-5 shrink-0 text-blue-600 transition-transform group-open:rotate-45"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.2"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14M5 12h14" />
-            </svg>
-          </summary>
-          <p className="text-sm text-slate-600 mt-3 leading-relaxed">{item.a}</p>
-        </details>
-      ))}
-    </div>
-  </div>
-</section>
+          <div className="mt-10 space-y-4">
+            {[
+              {
+                q: 'How long does net-metering approval take?',
+                a: 'Timelines depend on IESCO and NEPRA processing. We prepare and submit the complete file, follow up on your behalf, and keep you updated at each stage.',
+              },
+              {
+                q: 'Which solar system is right for me: on-grid, hybrid, or off-grid?',
+                a: 'On-grid suits most daytime users who want the lowest cost. Hybrid adds battery backup for load-shedding. Off-grid is for locations with no grid access. We recommend one after reviewing your load.',
+              },
+              {
+                q: 'Do you provide a warranty and after-sales service?',
+                a: 'Yes. Equipment carries manufacturer warranties, and we offer maintenance visits and on-site troubleshooting after handover.',
+              },
+              {
+                q: 'Do you work outside Islamabad?',
+                a: 'Yes. We serve Islamabad, Rawalpindi, and clients nationwide on larger projects. Contact us with your location and requirements.',
+              },
+              {
+                q: 'Is the site survey really free?',
+                a: 'Yes. The initial technical assessment and quotation are free, with no obligation to proceed.',
+              },
+            ].map((item, i) => (
+              <details key={i} className="group bg-white rounded-xl border border-slate-200 p-5 open:shadow-md transition-shadow">
+                <summary className="flex items-center justify-between gap-4 cursor-pointer list-none font-display font-bold text-navy-900">
+                  <span>{item.q}</span>
+                  <svg
+                    className="w-5 h-5 shrink-0 text-blue-600 transition-transform group-open:rotate-45"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14M5 12h14" />
+                  </svg>
+                </summary>
+                <p className="text-sm text-slate-600 mt-3 leading-relaxed">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Call To Action Banner */}
       <section className="bg-navy-900 py-16 relative overflow-hidden">
@@ -640,10 +694,10 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="text-center lg:text-left max-w-2xl">
             <h2 className="font-display font-extrabold text-2xl sm:text-4xl text-white">
-              Ready to Upgrade Your Power, Security, or Network Infrastructure?
+              Ready to Start Your Construction, Power, Security, or Network Project?
             </h2>
             <p className="text-slate-300 mt-3 text-sm sm:text-base">
-              Schedule a free on-site technical assessment with Rahim &amp; Sons Enterprises today.
+              Schedule a free on-site technical assessment with Rahim & Sons Enterprises today.
             </p>
           </div>
 
